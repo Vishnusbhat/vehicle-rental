@@ -3,13 +3,14 @@ import LoginSetup from './components/login-page/layout';
 import Layout from './components/home-page/layout';
 
 function App() {
+  // eslint-disable-next-line no-unused-vars
   const place = require('./components/home-page/header')
   return (
     <div className=' top'>
       <BrowserRouter>     
         <Routes>
           <Route
-            path='/'
+            path = '/'
             element={
               <div>
                 <Layout />
