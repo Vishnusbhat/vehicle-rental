@@ -1,8 +1,12 @@
 import { AiFillGoogleCircle, AiFillTwitterCircle } from "react-icons/ai"
 import { BiLogoFacebookCircle } from "react-icons/bi"
+import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 
-const LoginPage = () => {
-    return (  
+const LoginPage = ({user, setUser}) => {
+     const [displayName, setDisplayName] = useState('Login');
+    
+    return (
         
         <div className="min-h-[100vh] w-[100%]">
             <div className="background bg-bg-login bg-cover bg-no-repeat h-[100vh]"> </div>
@@ -13,12 +17,16 @@ const LoginPage = () => {
                     </div>              
                 </div>  
                 <div className="all-container relative -top-[60vh] h-[60vh] w-[30vw] font-navtext flex flex-col  items-center">
-                    <p className=" mt-7 text-5xl">Login</p>
+                    <p className=" mt-7 text-5xl">{displayName}</p>
                     <input type="text" placeholder="Username" name="username" className=" w-[20vw] h-[5vh] mt-8 rounded-lg bg-transparent text-center border-2  border-cyan-800 placeholder-cyan-800 placeholder-opacity-50"/>
 
                     <input type="password" placeholder="Password" name="password" className=" w-[20vw] h-[5vh] mt-5 rounded-lg bg-transparent text-center border-2  border-cyan-800 placeholder-cyan-800 placeholder-opacity-50"/>
 
-                    <button type="submit" className=" p-2 border-2 border-cyan-800 rounded-xl mt-5 text-opacity-80 hover:text-cyan-300 hover:bg-cyan-800" >Submit</button>
+                    <button type="submit" className=" p-2 border-2 border-cyan-800 rounded-xl mt-5 text-opacity-80 hover:text-cyan-300 hover:bg-cyan-800" onClick={()=>{
+                        
+                        }}>{user}</button>
+                        
+
 
                     {/* line */}
                     <div className="line w-[25vw] h-[0.5px] bg-cyan-800 mt-5"></div>
@@ -38,4 +46,5 @@ const LoginPage = () => {
     );
 }
  
-export default LoginPage
+
+export default  LoginPage;

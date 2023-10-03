@@ -3,11 +3,11 @@ import Footer from "./footer";
 import Slogan from "./slogan";
 import DateTime from "./datetime";
 import Header from "./header";
-const Layout = () => {
+const Layout = ({user}) => {
     return (
         <div className="layout">
             <Background />
-            <Header />
+            <Header user={user}/>
             <DateTime />
             <Slogan />
             <Footer />

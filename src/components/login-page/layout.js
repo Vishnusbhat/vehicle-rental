@@ -4,12 +4,12 @@ import Footer from "../home-page/footer";
 
 
 
-const LoginSetup = () => {
-   
+const LoginSetup = ({user, setUser}) => {
+    
     return ( 
         <div>
             <Header />
-            <LoginPage />
+            <LoginPage user = {user} setUser = {setUser}/>
             <Footer />
         </div>
      );
