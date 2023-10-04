@@ -33,11 +33,21 @@ const LoginPage = ({user, setUser}) => {
 
                     <div className="icons-list flex flex-row justify-evenly w-[80%] mt-5">
                         
+                        <button>
                         <div className="google-icon "><AiFillGoogleCircle size={70}/></div>
+                        </button>
 
+                        <button>
                         <div className="facebook-icon">< BiLogoFacebookCircle size={70}/></div>
+                        </button>
 
-                        <div className="facebook-icon">< AiFillTwitterCircle size={70}/></div>
+                        <button>
+                        <div className="facebook-icon">< AiFillTwitterCircle size={70}/></div>                        
+                        </button>
+                        
+
+                        
+
                     </div>
                 </div>              
              </div> 

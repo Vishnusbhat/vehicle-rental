@@ -8,7 +8,7 @@ const LoginSetup = ({user, setUser}) => {
     
     return ( 
         <div>
-            <Header />
+            {/* <Header /> */}
             <LoginPage user = {user} setUser = {setUser}/>
             <Footer />
         </div>

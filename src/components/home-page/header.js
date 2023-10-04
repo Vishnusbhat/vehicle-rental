@@ -17,7 +17,7 @@ const Header = ( {user}) => {
         
         <header>
             
-            <nav className=" bg-white opacity-90 w-full h-20 p-0 fixed top-0    left-0 z-20 font-navtext text-xl">
+            <nav className=" bg-white opacity-100 w-full h-20 p-0 fixed top-0    left-0 z-20 font-navtext text-xl shadow-2xl">
                 <NavLink to='/'>
                 <img src={Logo} alt="Logo error" className=' w-16  absolute top-2 left-2'/> </NavLink>
                 
@@ -26,7 +26,11 @@ const Header = ( {user}) => {
                     
                     <li className=' w-auto'><Link to='footer' smooth={true} duration={1000}  className=' cursor-pointer'>footer</Link></li>
 
-                    <li className=' w-auto'><Link to='top' smooth={true} duration={1000}  className=' cursor-pointer'>backtohome</Link></li>
+                    <li>
+                        <button className=' w-32 h-12  rounded-lg m-0  p-0 bg-yellow-500'> location
+
+                        </button>
+                    </li>                  
 
                     <li className=' w-auto'>{!isLoginPage &&
                     <NavLink to="/login">
@@ -47,3 +51,15 @@ const Header = ( {user}) => {
 
 
 export default Header;
+
+
+
+
+
+
+
+
+
+
+
+// <li className=' w-auto'><Link to='top' smooth={true} duration={1000}  className=' cursor-pointer'>backtohome</Link></li>
