@@ -11,8 +11,6 @@ mongoose.connect(keys.mongodb.dbURI,()=>{
     console.log('db connection successfull');
 })
   
-
-
 app.use('/login',authRoute);
 
 app.listen(3000,()=>{
