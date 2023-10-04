@@ -1,26 +1,28 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import LoginSetup from './components/login-page/layout';
 import Layout from './components/home-page/layout';
+import { useState } from 'react';
 
 function App() {
-  // eslint-disable-next-line no-unused-vars
-  const place = require('./components/home-page/header')
+  const [user, setUser] = useState('0');
+
   return (
     <div className=' top'>
       <BrowserRouter>     
         <Routes>
           <Route
-            path = '/'
+            path='/'
             element={
               <div>
-                <Layout />
+                <Layout user={user}/>
               </div>              
             }
             />
             <Route path = '/login'
             element={
               <div>
-                <LoginSetup/>
+                <LoginSetup user = {user} setUser = {setUser}/>
+                
               </div>
             }/>
           </Routes>      
