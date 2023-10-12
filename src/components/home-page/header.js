@@ -22,28 +22,27 @@ const Header = ( {user}) => {
                 <img src={Logo} alt="Logo error" className=' w-16  absolute top-2 left-2'/> </NavLink>
                 
                                    
-                <ul className=' flex flex-row justify-evenly items-center h-full w-1/2 absolute right-0 top-0 '>
-                    
-                    <li className=' w-auto'><Link to='footer' smooth={true} duration={1000}  className=' cursor-pointer'>footer</Link></li>
-
+                <ul className=' flex flex-row justify-evenly items-center h-full w-1/2 absolute right-0 top-0 '>             
+                        <button className=' w-32 h-12  rounded-lg m-0  p-0 '> Suggest
+                        </button>
                     <li>
-                        <button className=' w-32 h-12  rounded-lg m-0  p-0 bg-yellow-500'> location
-
+                        <button className=' w-32 h-12  rounded-lg m-0  p-0 border-location-color border-2 hover:bg-location-color'> location
                         </button>
                     </li>                  
 
                     <li className=' w-auto'>{!isLoginPage &&
                     <NavLink to="/login">
-                    <button className=' rounded-md border-2 border-cyan-800 p-2 px-4 hover:bg-cyan-800 hover:text-white' 
+                    <button className=' rounded-md  p-2 px-4 border-location-color border-2 hover:bg-location-color ' 
                     >{place}
                     </button>
                     </NavLink>
-}
+                    }
                     </li>
-                </ul>
 
-                <Outlet />
-                
+                    <li>
+                    </li>  
+                </ul>
+                <Outlet />                
             </nav>
         </header>
      );

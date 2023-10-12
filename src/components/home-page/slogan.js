@@ -1,7 +1,7 @@
 import { TypeAnimation } from "react-type-animation";
 const Slogan = () => {
     return ( 
-        <div className=" text-[5vw] absolute top-[100vh] font-text left-[50vw] z-0">
+        <div className=" text-[4vw] absolute top-[34vw] font-text left-[55vw] z-0">
             <TypeAnimation
         sequence={[
          
