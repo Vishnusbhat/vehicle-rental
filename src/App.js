@@ -25,6 +25,7 @@ function App() {
                 
               </div>
             }/>
+            <Route path='/google' />
           </Routes>      
       </BrowserRouter>
       

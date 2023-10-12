@@ -1,7 +1,7 @@
 import { AiFillGoogleCircle, AiFillTwitterCircle } from "react-icons/ai"
 import { BiLogoFacebookCircle } from "react-icons/bi"
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Outlet, NavLink } from "react-router-dom";
 
 const LoginPage = ({user, setUser}) => {
      const [displayName, setDisplayName] = useState('Login');
@@ -41,9 +41,11 @@ const LoginPage = ({user, setUser}) => {
                         <div className="facebook-icon">< BiLogoFacebookCircle size={70}/></div>
                         </button>
 
+                        <NavLink to='/google'>
                         <button>
                         <div className="facebook-icon">< AiFillTwitterCircle size={70}/></div>                        
                         </button>
+                        </NavLink>
                         
 
                         
@@ -51,7 +53,7 @@ const LoginPage = ({user, setUser}) => {
                     </div>
                 </div>              
              </div> 
-
+<Outlet />
         </div>
     );
 }
