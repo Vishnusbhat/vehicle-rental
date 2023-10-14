@@ -14,7 +14,7 @@ mongoose.connect(keys.mongodb.dbURI,()=>{
     console.log('db connection successfull');
 })
   
-app.use('/login',authRoute);
+app.use('/login/auth',authRoute);
 
 app.listen(3000,()=>{
     console.log("Listening requests from port 3000");
