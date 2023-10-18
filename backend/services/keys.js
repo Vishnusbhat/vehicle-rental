@@ -5,5 +5,8 @@ module.exports = {
     },
     mongodb:{
         dbURI :'mongodb+srv://abhiramu2003:Abhiram2003@rental.2oog7zb.mongodb.net/'
+    },
+    session:{
+        cookieKey:'ourrentalwebsite'
     }
 }
