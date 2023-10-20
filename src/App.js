@@ -1,10 +1,9 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import LoginSetup from './components/login-page/layout';
 import Layout from './components/home-page/layout';
-import { useState } from 'react';
 
 function App() {
-  const [user, setUser] = useState('0');
+  
 
   return (
     <div className=' top'>
@@ -14,18 +13,18 @@ function App() {
             path='/'
             element={
               <div>
-                <Layout user={user}/>
+                <Layout/>
               </div>              
             }
             />
-            <Route path = '/login'
+            <Route path = '/auth'
             element={
               <div>
-                <LoginSetup user = {user} setUser = {setUser}/>
+                <LoginSetup />
                 
               </div>
             }/>
-            <Route path='/google' />
+            
           </Routes>      
       </BrowserRouter>
       

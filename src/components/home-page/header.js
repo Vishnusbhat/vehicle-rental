@@ -1,25 +1,24 @@
 import Logo from '../../images/Logo.png'
-import { useState } from 'react';
-import { Link } from 'react-scroll';
-import { NavLink, Outlet, useLocation } from 'react-router-dom';
+
+import { Link, Outlet } from 'react-router-dom';
 import React from 'react';
 
 
 
 
 
-const Header = ( {user}) => {
+const Header = () => {
     
-    const [place, setPlace] = useState(user === '1' ? 'home' : 'login');
-    const location = useLocation();
-    const isLoginPage = location.pathname==='/login'
+    
+    
+    
     return ( 
         
         <header>
             
             <nav className=" bg-white opacity-100 w-full h-20 p-0 fixed top-0    left-0 z-20 font-navtext text-xl shadow-2xl">
-                <NavLink to='/'>
-                <img src={Logo} alt="Logo error" className=' w-16  absolute top-2 left-2'/> </NavLink>
+                <Link to='/'>
+                <img src={Logo} alt="Logo error" className=' w-16  absolute top-2 left-2'/> </Link>
                 
                                    
                 <ul className=' flex flex-row justify-evenly items-center h-full w-1/2 absolute right-0 top-0 '>             
@@ -30,17 +29,16 @@ const Header = ( {user}) => {
                         </button>
                     </li>                  
 
-                    <li className=' w-auto'>{!isLoginPage &&
-                    <NavLink to="/login">
+                    <li className=' w-auto'>
+                    <Link to="/auth">
                     <button className=' rounded-md  p-2 px-4 border-location-color border-2 hover:bg-location-color ' 
-                    >{place}
+                    >login
                     </button>
-                    </NavLink>
-                    }
+                    </Link>
+                    
                     </li>
 
-                    <li>
-                    </li>  
+                    
                 </ul>
                 <Outlet />                
             </nav>
