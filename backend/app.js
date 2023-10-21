@@ -15,12 +15,13 @@ const app = express();
 app.use(express.json());
 
 app.use(cookieSession({
-    maxAge:60*1000,
+    maxAge:24*60*60*1000,
     keys:[keys.session.cookieKey]
 }));
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(cors)
+
+app.use(cors());
 
 
 
