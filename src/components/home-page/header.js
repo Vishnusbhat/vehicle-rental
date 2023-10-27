@@ -52,16 +52,18 @@ const Header = () => {
               </li>
             </ul>
           ) : (
-            
-              <div className=" flex w-full h-full items-center justify-end pr-5 hover:cursor-pointer">
+            <div className=" flex w-full h-full items-center justify-end pr-5 hover:cursor-pointer">
+              {menu ? (
+                <div>
+                  <div className=" w-[100%] h-[90vh] absolute top-0 right-[6.5px] bg-white"></div>
+                  <ImCross onClick={showMenu} />
+                </div>
+              ) : (
                 <div>
                   <FaBars onClick={showMenu} />
                 </div>
-                <div className=" w-[200px] h-[100vh] bg-slate-300">
-                  <ImCross />
-                </div>
-              </div>
-            
+              )}
+            </div>
           )}
           <Outlet />
         </nav>

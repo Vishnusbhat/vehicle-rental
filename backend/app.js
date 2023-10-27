@@ -2,6 +2,7 @@
 const express = require ('express');
 const cors = require('cors');
 const authRoute = require('./routes/authenticationRoutes');
+const profileRoute = require('./routes/profileRoutes');
 const passportSetup = require('./services/passportSetup');
 const mongoose = require('mongoose');
 const keys = require('./services/keys');
@@ -19,7 +20,12 @@ app.use(cookieSession({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
+<<<<<<< HEAD
 app.use(cors())
+=======
+
+app.use(cors());
+>>>>>>> bc921727d89922b4be9b8626a6d51d26c6bb8944
 
 
 
@@ -28,6 +34,7 @@ mongoose.connect(keys.mongodb.dbURI,()=>{
 })
   
 app.use('/auth',authRoute);
+app.use('/profile',profileRoute);
 
 app.listen(3000,()=>{
     console.log("Listening requests from port 3000");

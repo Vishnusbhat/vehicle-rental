@@ -10,8 +10,11 @@ router.get('/logout',(req,res)=>{
     res.send('logged out');
 });
 
+
 router.get('/google/redirect',passport.authenticate('google'),(req,res)=>{
-    res.send('you have reached after callback');
+    res.redirect('/profile/');
 });
+
+
 
 module.exports = router;
