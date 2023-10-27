@@ -11,7 +11,7 @@ const Header = () => {
     setMenu(!menu);
   };
 
-  const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
+  // const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
   const isMediumDevice = useMediaQuery(
     "only screen and (min-width : 769px) and (max-width : 992px)"
   );
@@ -53,14 +53,33 @@ const Header = () => {
             </ul>
           ) : (
             <div className=" flex w-full h-full items-center justify-end pr-5 hover:cursor-pointer">
-              {menu ? (
-                <div>
-                  <div className=" w-[100%] h-[90vh] absolute top-0 right-[6.5px] bg-white"></div>
-                  <ImCross onClick={showMenu} />
-                </div>
-              ) : (
+              {!menu && (
                 <div>
                   <FaBars onClick={showMenu} />
+                </div>
+              )}
+              {menu && (
+                <div
+                  className=
+                    'w-[100vw] h-[90vh] fixed top-0 right-0 bg-white opacity-95 ease-in-out duration-500 flex justify-center flex-col'
+                  
+                >
+                  <div className="pr-4 pt-2 absolute top-0 right-0">
+                    <ImCross onClick={showMenu} />
+                  </div>
+                  <div>
+                    <ul className=" flex flex-col w-full h-full justify-evenly items-center text-3xl">
+                      <li className=" h-20">
+                        <button>location</button>
+                      </li>
+                      <li className=" h-20">
+                        <Link to="/auth">
+                          <button>login</button>
+                        </Link>
+                      </li>
+                      <ul></ul>
+                    </ul>
+                  </div>
                 </div>
               )}
             </div>
